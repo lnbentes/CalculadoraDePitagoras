@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Calculo } from 'src/model/Calculo';
+import { CalculoService } from '../service/calculo.service';
 import { Validacao } from '../validacao/validacao';
 
 @Component({
@@ -9,14 +11,18 @@ import { Validacao } from '../validacao/validacao';
 export class HipotenusaComponent implements OnInit {
 
   valida: Validacao = new Validacao()
+  calculo: Calculo = new Calculo()
 
   valorA: number = 0
+  valorAPI: string = "0"
   valorB: string = "0"
   valorC: string = "0"
   b: number = 0
   c: number = 0
 
-  constructor() { }
+  constructor(
+    private calculoService: CalculoService
+  ) { }
 
   ngOnInit(): void {
     window.scroll(0,0)
@@ -35,7 +41,18 @@ export class HipotenusaComponent implements OnInit {
     }else{
       alert("Use valores numéricos!")
     }
+  }
 
+  calcularAPI(){
+    // this.calculoService.getHipotenusaResultado(this.valorB, this.valorC).subscribe((resp: Calculo) =>{
+    //   this.calculo = resp
+    //   this.valorAPI = this.calculo.resultado
+    // })
+
+    this.calculoService.getHipotenusaResultado(this.valorB, this.valorC).subscribe({next: (resp: Calculo) =>{
+      this.calculo = resp
+      this.valorAPI = this.calculo.resultado
+    }})
   }
 
 }

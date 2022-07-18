@@ -22,8 +22,7 @@ import { CatetoComponent } from './cateto/cateto.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
-
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
