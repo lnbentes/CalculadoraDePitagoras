@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HipotenusaComponent } from './hipotenusa/hipotenusa.component';
 import { FooterComponent } from './footer/footer.component';
+import { CatetoComponent } from './cateto/cateto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HipotenusaComponent,
-    FooterComponent
+    FooterComponent,
+    CatetoComponent
   ],
   imports: [
     BrowserModule,
