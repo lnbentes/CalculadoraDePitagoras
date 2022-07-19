@@ -17,4 +17,5 @@
 <ul>
   <li>AngularJS</li>
   <li>Tailwind CSS</li>
+  <li>NgxSpinner</li>
 </ul>

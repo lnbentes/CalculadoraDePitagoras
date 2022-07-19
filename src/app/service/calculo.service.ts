@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { finalize, Observable } from 'rxjs';
 import { Calculo } from 'src/model/Calculo';
 
 @Injectable({
@@ -9,11 +10,13 @@ import { Calculo } from 'src/model/Calculo';
 export class CalculoService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private spinner: NgxSpinnerService
   ) { }
 
   getHipotenusaResultado(numero1: string, numero2: string): Observable<Calculo>{
-    return this.http.get<Calculo>(`https://calculadora-pitagoras.herokuapp.com/hipotenusa/${numero1}/${numero2}`)
+    this.spinner.show();
+    return this.http.get<Calculo>(`https://calculadora-pitagoras.herokuapp.com/hipotenusa/${numero1}/${numero2}`).pipe(finalize(() => this.spinner.hide()))
   }
 
   getCatetoResultado(numero1: string, numero2: string): Observable<Calculo>{
