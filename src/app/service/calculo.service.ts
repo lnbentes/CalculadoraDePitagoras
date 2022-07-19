@@ -27,7 +27,8 @@ export class CalculoService {
   }
 
   getCatetoResultado(numero1: string, numero2: string): Observable<Calculo>{
-    return this.http.get<Calculo>(`https://calculadora-pitagoras.herokuapp.com/cateto/${numero1}/${numero2}`)
+    this.spinner.show();
+    return this.http.get<Calculo>(`https://calculadora-pitagoras.herokuapp.com/cateto/${numero1}/${numero2}`).pipe(finalize(() => this.spinner.hide()))
   }
 
 }
