@@ -23,7 +23,11 @@ export class HipotenusaComponent implements OnInit {
     window.scroll(0,0)
   }
 
-
+  /**
+   * 1- Faz a requisição para a API passando os valores em string.
+   * 2- Devolve o resultado em string calculado pela API.
+   * 3- Em caso de erro devolve uma string com a mensagem.
+   */
   calcularAPI(){
 
       this.calculoService.getHipotenusaResultado(this.valorB, this.valorC).subscribe({next: (resp: Calculo) =>{
