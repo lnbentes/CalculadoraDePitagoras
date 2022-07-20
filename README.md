@@ -12,6 +12,19 @@
 ## Rodar a aplicação remotamente:
 <p>Acesse o site: <a href="https://calculadorapitagoras.netlify.app/">https://calculadorapitagoras.netlify.app/</a></p>
 
+## Como utilizar:
+
+Pode-se escolher calcular a hipotenusa ou um dos catetos
+
+![calculadoraMenu](https://user-images.githubusercontent.com/93729409/180094354-62f49bbc-f2de-4f08-b3cc-71d2e78cbda4.gif)
+
+No calculo da hipotenusa:
+
+![hipotenusa](https://user-images.githubusercontent.com/93729409/180094420-859c2ecd-59e7-4ba1-be59-7680d57c06fc.gif)
+
+No calculo do cateto:
+
+![cateto](https://user-images.githubusercontent.com/93729409/180094436-ce2b3530-72a4-4680-ba35-2461e0a9988c.gif)
 
 ## Tecnologias usadas:
 <ul>
