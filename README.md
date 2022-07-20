@@ -10,7 +10,7 @@
 </ul>
 
 ## Rodar a aplicação remotamente:
-<p>Acesse o site: </p>
+<p>Acesse o site: <a href="https://calculadorapitagoras.netlify.app/">https://calculadorapitagoras.netlify.app/</a></p>
 
 
 ## Tecnologias usadas:
